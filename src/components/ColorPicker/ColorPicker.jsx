@@ -1,8 +1,12 @@
 import {  SketchPicker } from "react-color"
+import { GetGlobalContexts } from "../../utils/globalContext"
 
 const ColorPicker = () => {
+    const {color, setColor} = GetGlobalContexts()
     return(
-       <SketchPicker />
+       <SketchPicker width="auto" color={color} onChangeComplete={(color) => {
+        setColor(color.hex);
+       }}  />
     )
 }
 

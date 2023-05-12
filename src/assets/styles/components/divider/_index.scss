@@ -9,6 +9,7 @@
         margin: 0 10px;
     }
     .divider__text{
+
         background: linear-gradient(
             90deg,
             #221fd8 10.14%,
@@ -19,5 +20,8 @@
           -webkit-text-fill-color: transparent;
           background-clip: text;
           text-fill-color: transparent;
+    }
+    .divider__text--color{
+        text-transform: uppercase;
     }
 }

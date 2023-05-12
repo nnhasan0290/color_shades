@@ -16,9 +16,9 @@
     font-weight: $fw-bold;
     background: linear-gradient(
       90deg,
-      #e53d62 10.14%,
-      #581221 49.71%,
-      #030000 84.62%
+      #0084ff 10.14%,
+      #004f9e 49.71%,
+      #000616 84.62%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -34,6 +34,8 @@
       position: absolute;
       left:0;
       top: 100%;
+      width: 100%;
+      z-index: 1;
     }
 
     .heading__form__input {
@@ -41,7 +43,7 @@
       padding: $p-2;
       border: $border-1;
       width: 350px;
-      
+      text-transform: uppercase;
       @include largeMobile{
         width: auto;
       }
@@ -55,9 +57,11 @@
       border: $border-1;
       border-radius: 0 $rounded_md $rounded_md 0;
       padding: 0 $p-3;
+      background-color: $primary;
+      color: white;
+      opacity: 0.8;
       &:hover {
-        background-color: $primary;
-        color: white;
+        opacity:1;
         transition: all 0.3s ease;
       }
     }

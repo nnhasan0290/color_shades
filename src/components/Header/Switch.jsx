@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { GetGlobalContexts } from "../../utils/globalContext";
 
 const Switch = () => {
-  const [filterState, setFilterState] = useState(false);
+  const {setH2l,h2l} = GetGlobalContexts()
   return (
     <div className="filter">
         <span>High &rarr; Low</span>
@@ -10,7 +10,7 @@ const Switch = () => {
         <input
           className="filter__switch__checkbox"
           type="checkbox"
-          onChange={() => setFilterState(!filterState)}
+          onChange={() => setH2l(!h2l)}
         />
         <span className="filter__switch__slider"></span>
       </label>

@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     .shades__card{
-        height: 120px;
+        height: 150px;
         flex-basis: 25%;
         @include tablet{
             flex-basis: 50%
