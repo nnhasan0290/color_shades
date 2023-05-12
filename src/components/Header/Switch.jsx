@@ -4,11 +4,7 @@ const Switch = () => {
   const [filterState, setFilterState] = useState(false);
   return (
     <div className="filter">
-      {filterState ? (
-        <span>Low &rarr; High</span>
-      ) : (
         <span>High &rarr; Low</span>
-      )}
 
       <label className="filter__switch">
         <input

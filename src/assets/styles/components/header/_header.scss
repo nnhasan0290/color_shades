@@ -5,7 +5,7 @@
   padding: $p-2 0;
   flex-direction: row;
 
-  @include tablet{
+  @include extraLargeTablet{
     flex-direction: column;
     gap: 1rem;
   }
@@ -16,9 +16,9 @@
     font-weight: $fw-bold;
     background: linear-gradient(
       90deg,
-      #221fd8 10.14%,
-      #12badf 49.71%,
-      #c5018e 84.62%
+      #e53d62 10.14%,
+      #581221 49.71%,
+      #030000 84.62%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -29,19 +29,28 @@
   .heading__form {
     display: flex;
     align-items: stretch;
+    position: relative;
+    .heading__form__colorPicker{
+      position: absolute;
+      left:0;
+      top: 100%;
+    }
 
     .heading__form__input {
       border-radius: $rounded_md 0 0 $rounded_md;
       padding: $p-2;
       border: $border-1;
       width: 350px;
-      @include tablet {
+      
+      @include largeMobile{
         width: auto;
       }
       &:focus {
         border: $border-primary;
       }
+      
     }
+    
     .heading__form__submit {
       border: $border-1;
       border-radius: 0 $rounded_md $rounded_md 0;

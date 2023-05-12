@@ -1,0 +1,23 @@
+.divider{
+    display: flex;
+    align-items: center;
+    margin: $m-4 0;
+    hr{
+        flex: 1;
+        border: none;
+        border-top: $border-1;
+        margin: 0 10px;
+    }
+    .divider__text{
+        background: linear-gradient(
+            90deg,
+            #221fd8 10.14%,
+            #12badf 49.71%,
+            #c5018e 84.62%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+    }
+}
