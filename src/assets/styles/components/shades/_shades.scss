@@ -4,8 +4,21 @@
     .shades__card{
         height: 150px;
         flex-basis: 25%;
+        padding: $p-3;
+        font-size: $fs-large;
+        color: white;
+        text-transform: uppercase;
+        cursor: pointer;
+        box-sizing: border-box;
+        transition: all 0.3s;
         @include tablet{
             flex-basis: 50%
         }
+        &:hover{
+            border: $border-1;
+        }
+    }
+    .shades__error{
+        font-size: $fs-large;
     }
 }

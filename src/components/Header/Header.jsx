@@ -1,12 +1,13 @@
 import Switch from "./Switch";
 import { GetGlobalContexts } from "../../utils/globalContext";
 import ColorPicker from "../ColorPicker/ColorPicker";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useOutsideClickHandler from "../../utils/isClickedOutside";
 
 const Header = () => {
   const [showPicker, togglePicker] = useState(false);
-  const {color, setColor } = GetGlobalContexts();
+  const [query, setQuery] = useState(false);
+  const { color, setColor } = GetGlobalContexts();
 
   const handleOutsideClick = () => {
     togglePicker(false);
@@ -18,8 +19,12 @@ const Header = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     togglePicker(false);
+    setColor(query);
   };
 
+  useEffect(() => {
+    setQuery(color);
+  }, [color]);
 
   return (
     <div className="heading csg-container">
@@ -29,8 +34,8 @@ const Header = () => {
           type="text"
           className="heading__form__input"
           onFocus={() => togglePicker(true)}
-          value={color}
-          onChange={(e) => setColor(e.target.value)}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
         />
         {showPicker && (
           <div className="heading__form__colorPicker">

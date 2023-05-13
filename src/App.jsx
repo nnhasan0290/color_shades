@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import "./assets/styles/_global.scss";
 import Divider from "./components/Divider/Divider";
 import Header from "./components/Header/Header";
@@ -8,6 +9,7 @@ function App() {
       <Header/>
       <Divider/>
       <Shades/>
+      <Toaster position="bottom-center"/>
     </>
   );
 }

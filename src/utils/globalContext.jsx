@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const GlobalContext = createContext();
 
 const ContextProvider = ({ children }) => {
-  const [color, setColor] = useState("#FFFFFF")
+  const [color, setColor] = useState("#4A90E2")
   const [h2l, setH2l] = useState(false);
   
   return (
