@@ -6,10 +6,16 @@ import Shades from "./components/Shades/Shades";
 function App() {
   return (
     <>
-      <Header/>
-      <Divider/>
-      <Shades/>
-      <Toaster position="bottom-center"/>
+      {/* heading */}
+      <Header />
+
+      <Divider />
+
+      {/* all shades */}
+      <Shades />
+
+      {/* react hot toast */}
+      <Toaster position="bottom-center" />
     </>
   );
 }

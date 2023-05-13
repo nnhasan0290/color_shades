@@ -9,13 +9,16 @@ const Header = () => {
   const [query, setQuery] = useState(false);
   const { color, setColor } = GetGlobalContexts();
 
+  //hide the color picker when clicked on outside 
   const handleOutsideClick = () => {
     togglePicker(false);
   };
 
-  const element = useRef(null);
-  useOutsideClickHandler(element, handleOutsideClick);
+  //Ref of Search form
+  const formRef = useRef(null);
+  useOutsideClickHandler(formRef, handleOutsideClick);
 
+  //form submit method
   const handleSubmit = (e) => {
     e.preventDefault();
     togglePicker(false);
@@ -29,7 +32,8 @@ const Header = () => {
   return (
     <div className="heading csg-container">
       <h2 className="heading__title">Color Shade Generator</h2>
-      <form ref={element} className="heading__form" onSubmit={handleSubmit}>
+      {/* search Form */}
+      <form ref={formRef} className="heading__form" onSubmit={handleSubmit}>
         <input
           type="text"
           className="heading__form__input"
@@ -37,6 +41,7 @@ const Header = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
+        {/* colorpicker code  */}
         {showPicker && (
           <div className="heading__form__colorPicker">
             <ColorPicker formSubmit={handleSubmit} />

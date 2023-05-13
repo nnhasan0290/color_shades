@@ -1,12 +1,15 @@
 import { GetGlobalContexts } from "../../utils/globalContext";
 
 const Switch = () => {
-  const {setH2l,h2l} = GetGlobalContexts()
+  //global contexts
+  const { setH2l, h2l } = GetGlobalContexts();
+  
   return (
     <div className="filter">
-        <span>High &rarr; Low</span>
+      <span>High &rarr; Low</span>
 
       <label className="filter__switch">
+        {/* hidden checkbox to control the button */}
         <input
           className="filter__switch__checkbox"
           type="checkbox"

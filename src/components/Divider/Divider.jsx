@@ -1,11 +1,13 @@
 import { GetGlobalContexts } from "../../utils/globalContext";
-
+//divider between header and body
 const Divider = () => {
-  const {color} = GetGlobalContexts();
+  const { color } = GetGlobalContexts();
   return (
     <div className="divider">
       <hr />
-      <span className="divider__text">20 Shades of <span className="divider__text--color">{color}</span> </span>
+      <span className="divider__text">
+        Shades Of <span className="divider__text--color">{color}</span>{" "}
+      </span>
       <hr />
     </div>
   );

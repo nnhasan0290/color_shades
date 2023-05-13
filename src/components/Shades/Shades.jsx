@@ -6,8 +6,8 @@ import { toast } from "react-hot-toast";
 const Shades = () => {
   const { color, h2l } = GetGlobalContexts();
   const [shades, setShades] = useState([]);
-  console.log(shades);
 
+  //Getting color values by depending on color context
   useEffect(() => {
     try {
       const values = new Values(color).shades(5);
@@ -37,8 +37,9 @@ const Shades = () => {
           <h2>#{shade.hex}</h2>
         </div>
       ))}
+      {/* showing not found when shades are empty */}
       {!shades.length && (
-        <h2 className="shades__error">No Colors Found</h2>
+        <h2 className="shades__error csg-container">No Colors Found</h2>
       )}
     </div>
   );
